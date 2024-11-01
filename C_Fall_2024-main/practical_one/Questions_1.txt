@@ -1,0 +1,24 @@
+1. Write a program to print "Hello, World!"
+Problem:
+Write a C program that prints "Hello, World!" to the console.
+
+
+2. Addition of Two Numbers
+Problem:
+Write a program that takes two numbers as input and prints their sum.
+
+3. Check if a Number is Even or Odd
+Problem:
+Write a C program to check whether a number entered by the user is even or odd.
+
+4. Find the Largest of Two Numbers
+Problem:
+Write a program that takes two numbers and prints the largest number.
+
+5. Simple Interest Calculation
+Problem:
+Write a C program to calculate simple interest. Use the formula Simple Interest = (P * R * T) / 100, where P is the principal amount, R is the rate of interest, and T is the time in years.
+
+6. Swap Two Numbers Without a Temporary Variable
+Problem:
+Write a program to swap two numbers without using a temporary variable.

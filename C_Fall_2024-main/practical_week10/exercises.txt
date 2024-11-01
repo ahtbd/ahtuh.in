@@ -1,0 +1,34 @@
+Page 131
+q1.
+A student's letter grade is calculated according ot the following schedule. Write aCprogram that accepts astudent's
+numerical grade, converts the numerical grade to an equivalent letter grade, and displays the letter grade.
+Numerical Grade
+greater than or equal to 90 A
+less than 90 but greater than or equal to 80 B les than 80 but greater than or equal to 70 C les than 70 but greater than or equal to 60 D less than 6 0 F
+F
+q2.
+The interest rate used on funds deposited ni a bank si determined by the amount of time the money is left on deposit. For a particular bank, the following schedule is used. Write a C program that accepts the time that funds are left on deposit and displays the interest rate corresponding to the time entered.
+Time on Deposit
+greaterthanorequal to5years
+less than 5 years but greater than or equal to 4 years less than 4years but greater than or equal to 3years less than 3 years but greater than or equal to 2 years less than 2years but greater than or equal to 1year lessthan 1year
+Interest Rate .045
+.04
+035 0.3 .025 .02
+
+q3.
+Write aCprogram that accepts anumber followed by one space and then aletter. If hte letter following the number is f, the program si ot treat the number entered as atemperature ni degrees Fahrenheit, convert the number ot hte equivalent degrees Celsius, and print asuitable display message. fI the letter following the number si c, hte pro-gram si ot treat the number entered as a temperature ni Celsius, convert the number to the equivalent degrees Fahrenheit, and print asuitable display message. If the letter si neither f nor c, the program should print amessage indicating that the data entered is incorrect and terminate. Use an i f - e l s e chain in your program and make use of the conversion formulas
+Celsius = (5.0 / 9.0) * (Fahrenheit —32.0) Fahrenheit = (9.0 / 5.0) * Celsius + 32.0
+
+Page 137
+q1.
+
+
+Q3_1b.
+Part (b): Handling Decimal Input for Month
+If the user enters a decimal number, such as 5.5 for the month, scanf("%d", &month) will ignore the fractional part and only store the integer part (5) in month. This happens because %d is used to read integers, which truncates the fractional part.
+partc:
+Month Validation: We check that the month is between 1 and 12.
+Day Validation: We check if the day is valid based on the specific month:
+April, June, September, and November have 30 days.
+February has 28 days (ignoring leap years).
+All other months have 31 days.
