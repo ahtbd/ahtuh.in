@@ -1,90 +1,101 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_SIZE 100
+struct Node {
+    int data;
+    struct Node* next;
+};
 
-typedef struct {
-    int data[MAX_SIZE];
-    int size;
-} SequentialList;
-void initList(SequentialList* list) {
-    list->size = 0;
+
+struct Node* allocateNode(int data) {
+    struct Node* node = (struct Node*)malloc(sizeof(struct Node));
+    if (node == NULL) {
+        printf("Memory allocation failed\n");
+        exit(1);
+    }
+    node->data = data;
+    node->next = NULL;
+    return node;
 }
 
-void insertElement(SequentialList* list, int element) {
-    if (list->size < MAX_SIZE) {
-        list->data[list->size++] = element;
+
+
+void insert(struct Node** head, int data) {
+    struct Node* newNode = allocateNode(data);
+    if (*head == NULL) {
+        *head = newNode;
     } else {
-        printf("List is full. Cannot insert element.\n");
+        struct Node* temp;
+        for (temp = *head; temp->next != NULL; temp = temp->next);
+        temp->next = newNode;
     }
 }
 
-int locateElement(SequentialList* list, int x) {
-    for (int i = 0; i < list->size; i++) {
-        if (list->data[i] == x) {
-            return i;
-        }
+
+
+void deleteElement(struct Node** head, int value) {
+    if (*head == NULL) {
+        printf("List is empty\n");
+        return;
     }
-    return -1;
+
+    struct Node* temp = *head;
+    struct Node* prev = NULL;
+
+    if (temp != NULL && temp->data == value) {
+        *head = temp->next;
+        free(temp);
+        return;
+    }
+
+    for (; temp != NULL && temp->data != value; prev = temp, temp = temp->next);
+
+    if (temp == NULL) {
+        printf("Element not found\n");
+        return;
+    }
+
+    prev->next = temp->next;
+    free(temp);
 }
 
-int getElementAtIndex(SequentialList* list, int index) {
-    if (index >= 0 && index < list->size) {
-        return list->data[index];
-    } else {
-        printf("Invalid index.\n");
-        return -1;
+
+void traverse(struct Node* head) {
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+}
+
+
+void freeList(struct Node* head) {
+    struct Node* temp;
+    while (head != NULL) {
+        temp = head;
+        head = head->next;
+        free(temp);
     }
 }
 
-void deleteElement(SequentialList* list, int x) {
-    int index = locateElement(list, x);
-    if (index != -1) {
-        for (int i = index; i < list->size - 1; i++) {
-            list->data[i] = list->data[i + 1];
-        }
-        list->size--;
-        printf("Element %d deleted.\n", x);
-    } else {
-        printf("Element %d not found.\n", x);
-    }
-}
-
-void displayList(SequentialList* list) {
-    if (list->size == 0) {
-        printf("List is empty.\n");
-    } else {
-        printf("Elements in the list: ");
-        for (int i = 0; i < list->size; i++) {
-            printf("%d ", list->data[i]);
-        }
-        printf("\n");
-    }
-}
 
 int main() {
-    SequentialList list;
-    initList(&list);
-    insertElement(&list, 10);
-    insertElement(&list, 20);
-    insertElement(&list, 30);
-    insertElement(&list, 40);
-    insertElement(&list, 50);
+    struct Node* head = NULL;
 
-    displayList(&list);
-    int index = locateElement(&list, 30);
-    if (index != -1) {
-        printf("First occurrence of 30 is at index: %d\n", index);
-    } else {
-        printf("Element 30 not found in the list.\n");
-    }
-    int element = getElementAtIndex(&list, 2);
-    if (element != -1) {
-        printf("Element at index 2: %d\n", element);
-    }
-    deleteElement(&list, 30);
-    displayList(&list);
-    deleteElement(&list, 100);
+    insert(&head, 1);
+    insert(&head, 2);
+    insert(&head, 3);
+    insert(&head, 4);
+
+    printf("List after insertion:\n");
+    traverse(head);
+
+    deleteElement(&head, 3);
+    printf("List after deletion:\n");
+    traverse(head);
+
+    freeList(head);
 
     return 0;
 }
