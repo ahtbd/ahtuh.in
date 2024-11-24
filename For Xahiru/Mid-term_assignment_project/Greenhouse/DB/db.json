@@ -1,0 +1,40 @@
+{
+  "user": [
+    {
+      "id": "cdad",
+      "username": "Atif ",
+      "email": "atifaslam762003@gmail.com",
+      "password": "atif@123"
+    },
+    {
+      "id": "542d",
+      "username": "Atif ",
+      "email": "fahadbcd17@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "f9c4",
+      "username": "Abuhamza Tuhin",
+      "email": "ahtuhin758@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "10dd",
+      "username": "Abuhamza Tuhin",
+      "email": "ahtuhin758@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "5a50",
+      "username": "Abuhamza Tuhin",
+      "email": "ahtuhin758@gmail.com",
+      "password": "12345690"
+    },
+    {
+      "id": "a506",
+      "username": "Abuhamza Tuhin",
+      "email": "ahtuhin758@gmail.com",
+      "password": "111"
+    }
+  ]
+}

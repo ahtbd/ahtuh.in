@@ -1,0 +1,23 @@
+[
+    {
+      "title": "Temperature",
+      "value": "24°C",
+      "color": "#e74c3c"
+    },
+    {
+      "title": "Humidity",
+      "value": "65%",
+      "color": "#16a085"
+    },
+    {
+      "title": "Soil Moisture",
+      "value": "45%",
+      "color": "#f39c12"
+    },
+    {
+      "title": "Light Level",
+      "value": "300 lux",
+      "color": "#3498db"
+    }
+  ]
+  
