@@ -1,0 +1,44 @@
+1. Implement Queue using linked list
+Queue: 10 20 30 40 
+Dequeued: 10
+Queue: 20 30 40 
+Front element: 20
+Queue is empty!
+
+
+Q2: Design a Printer Queue Simulation (Queue with Linked List)
+Task: Simulate a printer queue system in a printing department. You are tasked with managing print jobs using a queue. A print job has a document name and the number of pages to print. Implement the queue using a linked list and the following operations:
+
+addJob(): Add a new print job to the queue.
+processJob(): Process the next job in the queue (print it and remove it).
+viewNextJob(): View the next job to be printed.
+isQueueEmpty(): Check if the queue is empty.
+
+q3: Implement a Stack for Undo Functionality (Stack with Array)
+Task: Design a system where the user can perform actions (like writing text in a text editor) and undo the last action. Implement the undo functionality using a stack, where each operation is stored in the stack and can be undone by popping from the stack.
+
+performAction(): Record an action.
+undoAction(): Undo the last action.
+
+q4: Queue for Order Processing (Queue with Array)
+Task: You are working in an online store that processes orders. Each order contains an order ID and the amount of money for that order. Implement a queue to manage order processing where:
+
+placeOrder(): Place an order in the queue.
+processOrder(): Process the next order in the queue.
+viewOrder(): View the first order in the queue.
+isQueueEmpty(): Check if the queue is empty.
+
+
+q5: Balanced Parentheses Checker (Stack with Array)
+Task: Implement a program that checks if the parentheses in a string are balanced. For this problem, you should use a stack. The program must handle:
+
+Opening parentheses (, {, [.
+Closing parentheses ), }, ].
+Return 1 if balanced, otherwise return 0.
+
+q6: Merge Two Sorted Lists (Linked List)
+Task: Merge two sorted linked lists into a single sorted linked list. Both input lists are already sorted, and you need to maintain the sorted order after merging them.
+
+mergeLists(): Merge two sorted linked lists into a new sorted list.
+
+q7. Write a C program that uses stack to chaange numbers from base 10 base 3
